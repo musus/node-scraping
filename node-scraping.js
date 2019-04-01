@@ -10,11 +10,12 @@ client.fetch(url, function(err, $, res) {
     if (err) {
         console.log(err);
     } else {
-        let scrapingArray = [];
+        let scrapingArray = ['name'];
 
         $(element).each(function() {
+            let text = '\n' + $(this).text();
 
-        scrapingArray.push($(this).text());
+        scrapingArray.push(text);
 
         });
         console.log(scrapingArray);
